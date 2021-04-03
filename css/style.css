@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 
 * {
   margin: 0;
@@ -15,6 +16,7 @@ body {
   --primary-font: "Poiret One", cursive;
   --secondary-font: "Handlee", cursive;
   --comforta: "Comfortaa", cursive;
+  --cursive: "Cookie", cursive;
   --color1: #e62524;
   --color2: #ec8385;
   --color3: #d02224;
@@ -26,6 +28,10 @@ body {
   background-color: var(--color2);
 }
 
+.hide {
+  display: none;
+}
+
 .nav {
   /*   display: flex; */
   background-color: white;
@@ -33,7 +39,7 @@ body {
   text-align: center;
   left: 0;
   font-family: var(--primary-font);
-  height: auto;
+  height: 9vw;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -50,14 +56,14 @@ body {
 }
 
 .nav_contents {
-  max-width: 600px;
+  max-width: 785px;
 
   margin: auto;
 }
 .nav_contents ul {
   text-align: right;
   text-decoration: none;
-  padding: 35px 0;
+  padding: 52px 0;
 }
 
 .nav_contents ul li {
@@ -67,10 +73,10 @@ body {
   float: none;
 }
 .nav_contents ul li a {
-  margin: 0 23px;
+  margin: 0 20px;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 20px;
+  font-size: 17px;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -101,20 +107,23 @@ body {
 }
 
 .nav_contents ul li:nth-child(1),
-.nav_contents ul li:nth-child(3) {
+.nav_contents ul li:nth-child(2),
+.nav_contents ul li:nth-child(4),
+.nav_contents ul li:nth-child(5) {
   border-right: 2px solid #641220;
 }
 
 .nav_contents ul li:nth-child(1),
-.nav_contents ul li:nth-child(2) {
+.nav_contents ul li:nth-child(2),
+.nav_contents ul li:nth-child(3) {
   float: left;
 }
 
 .logo {
   height: auto;
-  width: 130px;
+  width: 190px;
   position: absolute;
-  left: 50%;
+  left: 51%;
   transform: translateX(-68%);
 }
 
@@ -127,8 +136,8 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  transform: translateY(-109%);
-  right: 0;
+  transform: translateY(-127%);
+  right: -120px;
   margin: 0 160px;
   padding: 5px;
 }
@@ -160,7 +169,7 @@ body {
   width: 100%;
   height: 100%;
   background-attachment: fixed;
-  background-image: url(../images/cover.jpg);
+  background-image: url(../images/background-main1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -304,34 +313,6 @@ main {
   position: relative;
 }
 
-/* #main-contents h2 {
-  font-family: var(--primary-font);
-  color: var(--text-color);
-  font-size: 50px;
-}
-
-#main-contents h5 {
-  font-family: var(--secondary-font);
-  color: var(--text-color);
-  font-size: 20px;
-}
-.main-circle {
-  width: 22vw;
-  height: 22vw;
-  border-radius: 50%;
-  background-color: #ff4d4d;
-  opacity: 0;
-}
-.main-text {
-  position: absolute;
-
-  z-index: 1;
-}
-.main-paragraph {
-  width: 17vw;
-  position: absolute;
-
-  z-index: 1; */
 #main-content {
   padding: 2vw;
 
@@ -344,7 +325,8 @@ main {
   width: 20vw;
   z-index: 0;
   border-radius: 50%;
-  background-color: #d02224;
+  background-color: #e25052;
+  opacity: 50%;
 }
 #main-content2 {
   padding: 2vw;
@@ -386,12 +368,439 @@ main {
   width: 10vw;
   position: absolute;
   left: 37vw;
-  z-index: 1;
 }
 
-@media screen and (max-width: 320px) {
+/*new-release*/
+
+#new-release {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+#banner-container {
+  margin: 0 10vw;
+
+  /*   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 3px 9px; */
+
+  display: flex;
+  flex-direction: row;
+  padding: 3vw;
+}
+
+.banner {
+  width: 40%;
+
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+.banner img {
+  width: 100%;
+}
+
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #ffcccc;
+}
+.banner-text {
+  text-align: center;
+  padding: 2vw;
+  color: var(--text-color);
+}
+
+.banner-text h1 {
+  font-family: var(--primary-font);
+  font-size: 36px;
+  margin: 0.5vw;
+}
+
+.banner-text .song {
+  font-family: var(--cursive);
+  font-size: 40px;
+  margin: 0.5vw;
+}
+.new-song {
+  font-size: 40px;
+}
+
+.banner-text h2 {
+  font-family: var(--primary-font);
+  margin: 0.5vw;
+}
+.banner-text h3 {
+  font-family: var(--primary-font);
+  margin: 0.5vw;
+}
+
+.banner-media .fa-facebook,
+.banner-media .fa-instagram,
+.banner-media .fa-youtube,
+.banner-media .fa-spotify {
+  font-size: 30px;
+  margin: 0 1vw;
+}
+
+/*tablet nav*/
+.mainMenu {
+  list-style: none;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: -16px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color2);
+  transition: top 1s ease;
+  display: none;
+}
+
+.mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  color: #641220;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.mainMenu li a:hover {
+  background-color: #111;
+  color: white;
+  transition: 1s ease;
+}
+
+.openMenu {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 6px;
+  display: block;
+  cursor: pointer;
+  padding: 2vw;
+}
+
+.closeMenu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fa-bars:before {
+  color: #d02224;
+}
+.fa-times:before {
+  color: #d02224;
+}
+
+.banner-media .fa-facebook,
+.banner-media .fa-instagram,
+.banner-media .fa-youtube,
+.banner-media .fa-spotify {
+  font-size: 30px;
+  color: #641220;
+}
+
+/*audio*/
+#audio-file {
+  width: 100%;
+  background-color: #f8d3d4;
+}
+
+#info-and-audio {
+  /*   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 3px 26px; */
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3vw;
+}
+
+.audio-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4d4d;
+  height: 25vw;
+  width: 28vw;
+  margin: 0 0;
+}
+
+.audio-info h2 {
+  font-size: 40px;
+  font-family: var(--primary-font);
+  padding: 3vw;
+  color: var(--text-color);
+}
+
+.play-audio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  background-color: #e9ecef;
+  height: 25vw;
+  margin: 0 0;
+  width: 70%;
+}
+
+.audio-logo {
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  margin-top: 1vw;
+}
+.audio-logo img {
+  width: 100%;
+}
+
+.audio-name {
+  font-family: var(--cursive);
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+#audio-file .spotify {
+  height: 7vw;
+  width: 7vw;
+  background-color: #ff9999;
+  border-radius: 50%;
+  position: absolute;
+  right: 42vw;
+  top: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 85%;
+}
+
+.spotify .fa-spotify {
+  font-size: 55px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navi1 {
+    visibility: visible;
+  }
   .header {
     height: 100vh;
     width: 100%;
+  }
+
+  #container {
+    background-image: none;
+    background-color: var(--color2);
+  }
+
+  .square {
+    background-color: var(--color1);
+    height: 28vw;
+    width: 28vw;
+    top: 78px;
+    right: -275px;
+    opacity: 100%;
+  }
+
+  .circle {
+    width: 31vw;
+    height: 31vw;
+    left: 267px;
+    top: 59vw;
+    opacity: 100%;
+  }
+
+  .header-logo {
+    width: 37vw;
+    top: 32%;
+    left: 28%;
+  }
+
+  .first-text {
+    bottom: 106px;
+    right: 22px;
+  }
+
+  .second-text {
+    right: 14px;
+  }
+
+  .nav {
+    visibility: hidden;
+  }
+
+  #the_div {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .slogan {
+    left: 21vw;
+  }
+
+  .greetings {
+    width: 41vw;
+    right: 4vw;
+  }
+  #text h1 {
+    font-size: 52px;
+  }
+  #text p {
+    font-size: 29px;
+  }
+
+  #banner-container {
+    flex-direction: column;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner-text {
+    padding: 3vw;
+  }
+
+  .banner-media {
+    padding: 3vw;
+  }
+
+  /*audio*/
+
+  #info-and-audio {
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw;
+  }
+
+  .audio-info {
+    width: 100%;
+    margin: 0 0;
+  }
+  .audio-info h2 {
+    font-size: 20px;
+  }
+  .play-audio {
+    margin: 0;
+    width: 100%;
+  }
+
+  #audio-file .spotify {
+    right: 46vw;
+    top: 315vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .square {
+    height: 38vw;
+    width: 38vw;
+    top: 81px;
+    right: -130px;
+  }
+
+  .header-logo {
+    width: 54vw;
+    left: 22%;
+  }
+
+  .circle {
+    width: 48vw;
+    height: 48vw;
+    left: 108px;
+    top: 98vw;
+  }
+
+  .first-text {
+    bottom: 70px;
+    right: 14px;
+  }
+
+  .square h1 {
+    font-size: 19px;
+  }
+  .second-text {
+    right: 3px;
+  }
+  .third-text {
+    bottom: 37px;
+  }
+  .fa-times:before {
+    margin-right: 14vw;
+  }
+
+  .mainMenu {
+    overflow-x: hidden;
+  }
+
+  #the_div {
+    width: 45vw;
+    height: 45vw;
+  }
+
+  #text h1 {
+    font-size: 26px;
+  }
+  #text p {
+    font-size: 16px;
+  }
+
+  .banner-text h1 {
+    font-size: 25px;
+  }
+
+  .banner-text h2 {
+    font-size: 24px;
+  }
+
+  .banner-text h3 {
+    font-size: 14px;
+  }
+
+  .banner-media .fa-facebook,
+  .banner-media .fa-instagram,
+  .banner-media .fa-youtube,
+  .banner-media .fa-spotify {
+    font-size: 25px;
+  }
+  /*audio*/
+  #info-and-audio {
+    padding: 4vw;
+  }
+
+  .play-audio {
+    height: auto;
+  }
+  .audio-logo {
+    height: 20vw;
+    width: 20vw;
+    margin: 2vw 0;
+  }
+
+  audio {
+    width: 262px;
+  }
+
+  #audio-file .spotify {
+    right: 19vw;
+    top: 433vw;
+  }
+  .spotify .fa-spotify {
+    font-size: 35px;
   }
 }
