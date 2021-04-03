@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 //for desktop and laptop
 ScrollTrigger.matchMedia({
   "(min-width:1000px)": function () {
-    gsap.from("#the_div", {
+    /*     gsap.from("#the_div", {
       y: "20vw",
       ease: "easeInOut",
       scrollTrigger: {
@@ -52,7 +52,7 @@ ScrollTrigger.matchMedia({
         start: "top  ",
         end: "bottom 64%  ",
       },
-    });
+    }); */
 
     //new release
     gsap.from(".banner", {
