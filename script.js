@@ -125,6 +125,56 @@ ScrollTrigger.matchMedia({
         end: "bottom 64%  ",
       },
     });
+
+    //events
+    gsap.from(".event-info", {
+      opacity: 0,
+      delay: 2,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: "#audio-file",
+        scrub: 1,
+        start: "top ",
+        end: "bottom 64%  ",
+      },
+    });
+
+    gsap.from(".event-text", {
+      y: "20vw",
+      delay: 2,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: "#audio-file",
+        scrub: 1,
+        start: "top ",
+        end: "bottom 64%  ",
+      },
+    });
+
+    //collab
+    gsap.from(".collab-image", {
+      opacity: 0,
+      delay: 2,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: "#event",
+        scrub: 1,
+        start: "top ",
+        end: "bottom 64%  ",
+      },
+    });
+
+    gsap.from(".collab-desc", {
+      y: "20vw",
+      delay: 2,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: "#event",
+        scrub: 1,
+        start: "top ",
+        end: "bottom 64%  ",
+      },
+    });
   },
 });
 
