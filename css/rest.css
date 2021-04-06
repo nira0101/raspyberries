@@ -386,3 +386,236 @@ footer {
   color: var(--text-color);
   font-weight: bold;
 }
+
+/*contact*/
+.contact-main {
+  margin: 1vw 15vw;
+}
+.contact-heading {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 30px;
+  padding: 2vw;
+}
+.connect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.box1,
+.box2,
+.box3 {
+  width: 20vw;
+  height: 20vw;
+  background-color: #ff3333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  opacity: 50%;
+}
+.box1:hover,
+.box2:hover,
+.box3:hover {
+  opacity: 100%;
+}
+.box1 .fa-phone,
+.box2 .fa-envelope,
+.box3 .fa-map-marker-alt {
+  font-size: 90px;
+  color: #641220;
+}
+
+.box-text {
+  font-family: var(--primary-font);
+  font-size: 13px;
+  color: var(--text-color);
+  padding: 1vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8d3d4;
+}
+
+input.email,
+input.subject {
+  width: 50%;
+  margin-bottom: 1vw;
+}
+#contact-form {
+  margin-top: 2vw;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-text h1 {
+  font-family: var(--primary-font);
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+label h3 {
+  font-family: var(--primary-font);
+  font-size: 25px;
+  color: var(--text-color);
+  padding: 0.5vw;
+}
+button h3 {
+  font-family: var(--primary-font);
+  font-size: 25px;
+  color: var(--text-color);
+  padding: 0.5vw;
+}
+.status {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 25vw;
+  }
+
+  .openMenu {
+    top: 0;
+  }
+
+  .video-title {
+    height: 22vw;
+    width: 22vw;
+    bottom: 63vw;
+    left: 4vw;
+  }
+  .resized-logo {
+    width: 26%;
+    position: absolute;
+    top: 0%;
+    left: -3vw;
+    padding: 1vw;
+  }
+  .resized-logo img {
+    width: 100%;
+  }
+
+  .youtube .fa-youtube {
+    font-size: 120px;
+  }
+  /*contact*/
+  .contact-main {
+    margin-top: 20vw;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    opacity: 100%;
+  }
+  .box1 .fa-phone,
+  .box2 .fa-envelope,
+  .box3 .fa-map-marker-alt {
+    font-size: 50px;
+  }
+  .box-text {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  iframe {
+    width: 100%;
+  }
+  main {
+    margin: 18vw 4vw;
+  }
+
+  .heading h1 {
+    font-size: 20px;
+    padding: 2.5vw;
+  }
+  .video-title {
+    height: 29vw;
+    width: 29vw;
+    bottom: 85vw;
+  }
+  .video-title h1 {
+    font-size: 16px;
+  }
+  .video-title h2 {
+    font-size: 30px;
+  }
+
+  .youtube .fa-youtube {
+    font-size: 81px;
+  }
+  .youtube-desc h2 {
+    font-size: 20px;
+  }
+  .resized-logo {
+    width: 29%;
+  }
+
+  .foot-text h1 {
+    font-size: 16px;
+  }
+
+  .foot-text h3 {
+    font-size: 11px;
+  }
+  .press-text h1 {
+    font-size: 16px;
+  }
+  .press-text a {
+    font-size: 11px;
+  }
+
+  .foot-media .fa-facebook,
+  .foot-media .fa-instagram,
+  .foot-media .fa-youtube,
+  .foot-media .fa-spotify {
+    font-size: 12px;
+  }
+
+  .foot-logo {
+    width: 27vw;
+  }
+  /*contact*/
+  .contact-heading {
+    font-size: 20px;
+  }
+
+  .connect {
+    flex-direction: column;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+    height: 28vw;
+    opacity: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+  #contact-form {
+    margin-top: 10vw;
+  }
+  .form-text h1 {
+    font-size: 25px;
+    margin-bottom: 2vw;
+  }
+  label h3 {
+    font-size: 18px;
+  }
+  button h3 {
+    font-size: 18px;
+  }
+}

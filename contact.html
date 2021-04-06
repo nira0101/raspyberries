@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/rest.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <title>Video</title>
+    <title>Contact</title>
   </head>
   <body>
     <header>
@@ -76,37 +77,54 @@
       </div>
     </header>
 
-    <main>
-      <section class="vid_1">
-        <div class="heading"><h1>VIDEOS</h1></div>
-        <div class="video-title fade-in">
-          <h1>New Release</h1>
-          <h2>No panties</h2>
-        </div>
-        <div class="v1">
-          <iframe
-            width="100%"
-            height="400"
-            margin="4vw 0"
-            src="https://www.youtube.com/embed/Pd4a2PavQ2s"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
+    <main class="contact-main">
+        <h1 class="contact-heading">Connect with us</h1>
+      <div class="connect">
+          <div class="box1 fade-in">
+              <div class="box-icon "><i class="fas fa-phone"></i></div>
+              <div class="box-text">
+                  <h1>+45 12345678</h1>
+              </div>
+          </div>
+          <div class="box2 fade-in">
+            <div class="box-icon"><i class="fas fa-envelope"></i></div>
+            <div class="box-text">
+                <h1>abc@gmail.com</h1>
+            </div>
+          </div>
+          <div class="box3 fade-in">
+            <div class="box-icon"><i class="fas fa-map-marker-alt"></i></i></div>
+            <div class="box-text">
+                <h1>Hulgards plads, Copenhagen</h1>
+            </div>
+          </div>
+      </div>
 
-      <section class="follow">
-        <div class="youtube">
-          <a href="https://www.youtube.com/user/raspyberries"
-            ><i class="fab fa-youtube"></i
-          ></a>
+      <div id="contact-form">
+          <div class="form-text">
+              <h1>Write to us</h1>
+          </div>
+
+          <form action="https://formspree.io/f/mzbybgva" method="post">
+              <label name="email">
+                  <h3>Email</h3>
+                  <input type="email"  class="email" name="email" required>
+              </label>
+              <label name="subject">
+                  <h3>subject</h3>
+                  <input type="text" class="subject" name="subject" required>
+              </label>
+              <label name="Message">
+                  <h3>Messege</h3>
+                 <textarea class="message" cols="60" rows="10" name="message" required></textarea>
+              </label>
+              <div class="status"></div>
+              <button type="submit" class="submit"><h3>Send</h3></button>
+
+          </form>      
         </div>
-        <div class="youtube-desc">
-          <h2>Follow us on YouTube to see more of our videos</h2>
-        </div>
-      </section>
+
+      
     </main>
 
     <footer>
@@ -146,5 +164,6 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script src="rest.js"></script>
 </html>
