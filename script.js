@@ -1,12 +1,17 @@
 "use strict";
 
 const tabLet = document.querySelector(".navi1");
+const square = document.querySelector(".square");
+const circle = document.querySelector(".circle");
 
 function tabletSize() {
   if (window.matchMedia("(max-width: 768px)").matches) {
     tabLet.classList.remove("hide");
+    square.classList.add("hide");
+    circle.classList.add("hide");
   } else {
     tabLet.classList.add("hide");
+   
   }
 }
 
@@ -238,20 +243,7 @@ ScrollTrigger.matchMedia({
   },
 });
 //for mobilee
-ScrollTrigger.matchMedia({
-  "(max-width:480px)": function () {
-    gsap.from(".banner", {
-      opacity: 0,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: ".header",
-        scrub: 1,
-        start: "top ",
-        end: "bottom 80%  ",
-      },
-    });
-  },
-});
+
 console.log(gsap);
 
 const headerLogo = document.querySelector(".header-logo");

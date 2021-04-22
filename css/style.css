@@ -44,7 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  box-shadow: 0px 16px 40px -5px rgba(233, 236, 239, 0.77);
+  box-shadow: 0px 16px 40px -5px rgba(233, 236, 239, 0.7);
 }
 .bottom-nav {
   position: absolute;
@@ -54,6 +54,7 @@ body {
 .top-nav {
   position: fixed;
   top: 0;
+  background-color: rgba(252, 249, 249, 0.91);
 }
 
 .nav_contents {
@@ -981,23 +982,17 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-  .square {
-    height: 38vw;
-    width: 38vw;
-    top: 81px;
-    right: -130px;
+  .header {
+    height: 46vh;
   }
-
   .header-logo {
-    width: 54vw;
-    left: 22%;
+    width: 77vw;
+    left: 10%;
+    top: 22vw;
   }
-
-  .circle {
-    width: 48vw;
-    height: 48vw;
-    left: 108px;
-    top: 98vw;
+  .openMenu {
+    top: 2vw;
+    right: 15px;
   }
 
   .first-text {
@@ -1018,20 +1013,35 @@ footer {
     margin-right: 14vw;
   }
 
+  #main-content {
+    padding: 11vw;
+    background-color: var(--color2);
+  }
   .mainMenu {
     overflow-x: hidden;
   }
 
   #the_div {
-    width: 45vw;
-    height: 45vw;
+    width: 55vw;
+    height: 55vw;
+    opacity: none;
+    background-color: rgba(226, 80, 82, 0.74);
   }
 
   #text h1 {
-    font-size: 26px;
+    font-size: 33px;
+  }
+  .slogan {
+    left: 15vw;
   }
   #text p {
-    font-size: 16px;
+    font-size: 17px;
+  }
+  .greeting {
+    right: 3vw;
+  }
+  .banner-text {
+    padding: 4vw;
   }
 
   .banner-text h1 {
@@ -1073,16 +1083,22 @@ footer {
   audio {
     width: 262px;
   }
+  #audio-file {
+    margin-top: 2vw;
+  }
 
   #audio-file .spotify {
     right: 19vw;
-    top: 433vw;
+    top: 344vw;
   }
   .spotify .fa-spotify {
     font-size: 35px;
   }
 
   /*event*/
+  .event-info {
+    height: 60vw;
+  }
 
   .event-logo {
     width: 32vw;
@@ -1099,20 +1115,45 @@ footer {
   .date {
     font-size: 14px;
   }
+
   .event-text h1 {
     font-size: 14px;
   }
-
+  .event-text {
+    height: 25vw;
+    width: 25vw;
+    left: 68vw;
+    top: 417vw;
+  }
+  .event-location {
+    padding: 2vw;
+  }
   /*collab*/
+  #grid {
+    flex-direction: column;
+  }
   .collab-text h1 {
-    font-size: 13px;
+    font-size: 14px;
+    padding: 2vw;
   }
 
   .collab-desc h1 {
-    font-size: 13px;
+    font-size: 14px;
   }
   .collab-desc p {
-    font-size: 9px;
+    font-size: 11px;
+  }
+  .collab-image img {
+    width: 108%;
+    border-radius: 50%;
+  }
+  .collab-desc {
+    flex-direction: column;
+    padding: 4vw;
+  }
+  .collab1,
+  .collab2 {
+    margin-top: 4vw;
   }
 
   /*footer*/
