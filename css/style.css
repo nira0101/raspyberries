@@ -62,6 +62,22 @@ body {
 
   margin: auto;
 }
+
+li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--text-color);
+  transition: width 0.3s;
+  justify-content: center;
+}
+
+li:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+  align-items: center;
+}
 .nav_contents ul {
   text-align: right;
   text-decoration: none;
@@ -81,9 +97,10 @@ body {
   font-size: 17px;
   text-transform: uppercase;
   font-weight: bold;
+  padding: 7px;
 }
 
-.nav_contents ul li a::before,
+/* .nav_contents ul li a::before,
 .nav_contents ul li a::after {
   content: "";
   width: 100%;
@@ -106,6 +123,19 @@ body {
 .nav_contents ul li a:hover::before,
 .nav_contents ul li a:hover::after {
   transform: scaleX(1);
+} */
+
+/* li:hover:not(.active) {
+  background-color: black;
+  color: var(--text-color);
+  border-bottom: 1.5px solid black;
+  margin-bottom: 0.5vw;
+} */
+
+.active {
+  background-color: black;
+  color: black;
+  padding: 2vw;
 }
 
 .nav_contents ul li:nth-child(1),
@@ -166,16 +196,32 @@ body {
   color: white;
 }
 
-/*paralla*/
-#container {
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-image: url(../images/background-main1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (min-width: 1024px) {
 }
+
+#container {
+  max-height: 10vw;
+}
+
+.ida {
+  width: 100%;
+  position: absolute;
+  left: 55vw;
+  top: -2vw;
+}
+.asta {
+  width: 100%;
+  position: absolute;
+  top: 1.7vw;
+  right: 5vw;
+}
+.ida img {
+  width: 60%;
+}
+.asta img {
+  width: 50%;
+}
+/*paralla*/
 
 .header-logo {
   position: absolute;
@@ -205,7 +251,7 @@ body {
 .square {
   width: 18vw;
   height: 18vw;
-  background-color: var(--color2);
+  background-color: var(--color3);
   opacity: 60%;
   transform: rotate(45deg);
   overflow: hidden;
@@ -408,6 +454,7 @@ main {
   align-items: center;
   align-content: center;
   background-color: #ffcccc;
+  width: 40vw;
 }
 .banner-text {
   text-align: center;
@@ -439,11 +486,9 @@ main {
   margin: 0.5vw;
 }
 
-.banner-media .fa-facebook,
-.banner-media .fa-instagram,
 .banner-media .fa-youtube,
 .banner-media .fa-spotify {
-  font-size: 30px;
+  font-size: 43px;
   margin: 0 1vw;
 }
 
@@ -507,11 +552,9 @@ main {
   color: #d02224;
 }
 
-.banner-media .fa-facebook,
-.banner-media .fa-instagram,
 .banner-media .fa-youtube,
 .banner-media .fa-spotify {
-  font-size: 30px;
+  font-size: 43px;
   color: #641220;
 }
 
@@ -643,6 +686,9 @@ main {
   position: absolute;
   left: 65vw;
 }
+.event-text:hover {
+  border-radius: 100%;
+}
 
 .event-text h1 {
   font-family: var(--primary-font);
@@ -715,6 +761,13 @@ main {
   width: 100%;
   border-radius: 50%;
 }
+.collab-desc:hover {
+  background-color: var(--color2);
+}
+.collab1 a,
+.collab2 a {
+  text-decoration: none;
+}
 .collab-desc {
   display: flex;
   justify-content: center;
@@ -736,6 +789,9 @@ main {
   font-size: 12px;
   color: var(--text-color);
   text-transform: uppercase;
+}
+.collab-desc .fa-instagram {
+  font-size: 30px;
 }
 
 /*footer*/
@@ -770,16 +826,23 @@ footer {
 }
 .foot-text h1 {
   font-family: var(--primary-font);
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 1.5vw;
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: bolder;
 }
 .foot-text h3 {
   font-family: var(--primary-font);
-  font-size: 20px;
+  font-size: 18px;
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 700;
+}
+.foot-text a {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
 }
 .foot-media {
   display: flex;
@@ -809,10 +872,10 @@ footer {
 }
 .press-text h1 {
   font-family: var(--primary-font);
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 1.5vw;
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .press-text a {
@@ -907,6 +970,9 @@ footer {
   .banner-media {
     padding: 3vw;
   }
+  .banner-info {
+    width: 100%;
+  }
 
   /*audio*/
 
@@ -990,6 +1056,9 @@ footer {
     left: 10%;
     top: 22vw;
   }
+  .header-logo img {
+    width: 88%;
+  }
   .openMenu {
     top: 2vw;
     right: 15px;
@@ -1015,7 +1084,6 @@ footer {
 
   #main-content {
     padding: 11vw;
-    background-color: var(--color2);
   }
   .mainMenu {
     overflow-x: hidden;
@@ -1179,5 +1247,27 @@ footer {
 
   .foot-logo {
     width: 27vw;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+  .asta {
+    top: 11vw;
+  }
+  .asta img {
+    width: 60%;
+  }
+
+  .ida {
+    top: 11vw;
+  }
+  .ida img {
+    width: 60%;
+  }
+  .square {
+    top: 236px;
+  }
+  .circle {
+    top: -4px;
   }
 }

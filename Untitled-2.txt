@@ -1,0 +1,33 @@
+Home page:
+square-text up: intersectional? I+A
+Slogan text right: (Peace)+text? I+A
+follow-section: delete and reconsider it with new concepts.<Done>
+event section circle: think of something else to be there?I+A <>
+collaboration section: add icons to redirect the user to fb(only bivek),insta links.<DONE>
+footer contacts gmail: redirect the mail to bands mail account.<DONE>
+
+Form page:
+contacts: delete phone and location.<DONE>
+
+
+Footerpage:
+footer contact: make the headings bolder.<DONE>
+
+
+music sectionr: 
+social account: add iocns> soundcloud applemusic Yousee music<DONE>
+muisc page: have the spotify section in this page and direct the music section to spotify account<DONE>
+
+gallery page:
+photos p section: asta and ida description, mention the photographer too.
+                  / add the location icons and the description(name,place,time and date ).
+
+
+About us page:
+description p: change I+A
+page: add scoila media icons ida , asta and raspy berries.
+
+
+
+
+

@@ -74,6 +74,7 @@ body {
   font-size: 17px;
   text-transform: uppercase;
   font-weight: bold;
+  padding: 7px;
 }
 
 .nav_contents ul li a::before,
@@ -403,10 +404,8 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.box1,
-.box2,
-.box3 {
-  width: 20vw;
+.box1 {
+  width: 100%;
   height: 20vw;
   background-color: #ff3333;
   display: flex;
@@ -420,18 +419,19 @@ footer {
 .box3:hover {
   opacity: 100%;
 }
-.box1 .fa-phone,
-.box2 .fa-envelope,
-.box3 .fa-map-marker-alt {
-  font-size: 90px;
+
+.box1 .fa-envelope {
+  font-size: 150px;
   color: #641220;
 }
 
-.box-text {
+.box-text a {
   font-family: var(--primary-font);
-  font-size: 13px;
+  font-size: 40px;
   color: var(--text-color);
   padding: 1vw;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 form {
@@ -484,22 +484,37 @@ button h3 {
   padding: 2vw;
   font-size: 35px;
 }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 20px;
-  padding: 15px;
+.np-text {
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  padding: 0 3vw;
+  font-size: 25px;
+  margin-bottom: 1vw;
 }
-
-.gallery img {
+.c-text {
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  padding: 0 3vw;
+  font-size: 25px;
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+}
+.photo-info {
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 25px;
+  margin-bottom: 2vw;
+  font-style: italic;
+  font-weight: 400;
+}
+.np-photos,
+.c-photos {
   width: 100%;
-  display: block;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-  transition: all 100ms ease-out;
 }
-.gallery img:hover {
-  filter: none;
+.np-photos img,
+.c-photos img {
+  width: 100%;
 }
 
 /*Press page*/
@@ -622,6 +637,18 @@ button h3 {
   margin: 0 0;
   width: 70%;
 }
+.play-audio a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--text-color);
+  padding: 2vw;
+}
+.play-audio button {
+  height: 4vw;
+  width: 11vw;
+  border: none;
+  background-color: #ff4d4d;
+}
 
 .audio-logo {
   width: 13vw;
@@ -634,8 +661,8 @@ button h3 {
 }
 
 .audio-name {
-  font-family: var(--cursive);
-  font-size: 25px;
+  font-family: var(--primary-font);
+  font-size: 20px;
   color: var(--text-color);
 }
 
@@ -662,6 +689,39 @@ button h3 {
   font-family: var(--primary-font);
   font-size: 35px;
   color: var(--text-color);
+}
+
+.music-platforms {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vw;
+  justify-content: space-evenly;
+}
+.itunes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mp-icon {
+  border-radius: 50%;
+}
+.mp-icon .fa-itunes {
+  font-size: 250px;
+  text-align: center;
+  color: #ff4d4d;
+}
+.mp-icon .fa-soundcloud {
+  font-size: 250px;
+  text-align: center;
+  color: #ff4d4d;
+}
+
+.mp-text {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 30px;
+  padding: 1vw;
 }
 @media only screen and (max-width: 768px) {
   main {
@@ -709,9 +769,6 @@ button h3 {
   .box-text {
     font-size: 9px;
   }
-  .gallery img {
-    filter: none;
-  }
 
   /*about*/
   #about {
@@ -753,6 +810,12 @@ button h3 {
   #audio-file .spotify {
     right: 17vw;
     top: 324vw;
+  }
+  .mp-icon .fa-itunes {
+    font-size: 154px;
+  }
+  .mp-text {
+    font-size: 19px;
   }
 }
 
@@ -905,4 +968,20 @@ button h3 {
     font-size: 20px;
     margin-top: 25vw;
   }
+
+  /*gallery*/
+  .np-text {
+    font-size: 17px;
+  }
+  .photo-info {
+    font-size: 16px;
+    margin-bottom: 4vw;
+  }
+  .c-text {
+    font-size: 17px;
+  }
+}
+.active {
+  background-color: var(--color2);
+  color: black;
 }

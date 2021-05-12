@@ -137,7 +137,7 @@ ScrollTrigger.matchMedia({
       delay: 2,
       ease: "linear",
       scrollTrigger: {
-        trigger: "#audio-file",
+        trigger: "#new-release",
         scrub: 1,
         start: "top ",
         end: "bottom 64%  ",
@@ -149,7 +149,7 @@ ScrollTrigger.matchMedia({
       delay: 2,
       ease: "linear",
       scrollTrigger: {
-        trigger: "#audio-file",
+        trigger: "#new-release",
         scrub: 1,
         start: "top ",
         end: "bottom 64%  ",

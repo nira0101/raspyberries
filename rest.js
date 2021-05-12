@@ -92,7 +92,7 @@ $(document).ready(function (){
 });
 
 
-// gallery
+/* // gallery
 let proxy = { skew: 0 },
   skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
   clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
@@ -116,3 +116,4 @@ ScrollTrigger.create({
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
 gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+ */
