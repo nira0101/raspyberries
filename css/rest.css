@@ -77,29 +77,8 @@ body {
   padding: 7px;
 }
 
-.nav_contents ul li a::before,
-.nav_contents ul li a::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: var(--text-color);
-  position: absolute;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 2s;
-}
-.nav_contents ul li a::after {
-  bottom: 0;
-  transform-origin: right;
-}
-.nav_contents ul li a::before {
-  top: 0;
-  transform-origin: left;
-}
-
-.nav_contents ul li a:hover::before,
-.nav_contents ul li a:hover::after {
-  transform: scaleX(1);
+.nav_contents ul li a:hover {
+  color: #d02224;
 }
 
 .nav_contents ul li:nth-child(1),
@@ -203,7 +182,7 @@ body {
   color: #d02224;
 }
 .fa-times:before {
-  color: #d02224;
+  color: #641220;
 }
 
 .banner-media .fa-facebook,
@@ -351,6 +330,13 @@ footer {
   display: flex;
   flex-direction: row;
 }
+.foot-text a {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
 
 .foot-media .fa-facebook,
 .foot-media .fa-instagram,
@@ -393,6 +379,13 @@ footer {
 .contact-main {
   margin: 1vw 15vw;
 }
+
+#grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 10px 20px;
+}
 .contact-heading {
   font-family: var(--primary-font);
   color: var(--text-color);
@@ -400,71 +393,147 @@ footer {
   padding: 2vw;
 }
 .connect {
-  display: flex;
+  /*  display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-}
-.box1 {
+  justify-content: space-evenly; */
+  grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  height: 20vw;
+  height: auto;
   background-color: #ff3333;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  opacity: 50%;
-}
-.box1:hover,
-.box2:hover,
-.box3:hover {
-  opacity: 100%;
 }
 
-.box1 .fa-envelope {
-  font-size: 150px;
-  color: #641220;
-}
-
-.box-text a {
-  font-family: var(--primary-font);
-  font-size: 40px;
-  color: var(--text-color);
-  padding: 1vw;
-  text-decoration: none;
-  font-weight: bolder;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  background-color: #f8d3d4;
-}
-
-input.email,
-input.subject {
-  width: 50%;
-  margin-bottom: 1vw;
-}
 #contact-form {
-  margin-top: 2vw;
-  display: flex;
-
-  align-items: center;
-  flex-direction: column;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
-.form-text h1 {
-  font-family: var(--primary-font);
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: 50px 0;
+}
+
+#contact h3 {
+  color: #f96;
+  display: block;
   font-size: 30px;
-  color: var(--text-color);
+  font-weight: 400;
 }
 
-label h3 {
-  font-family: var(--primary-font);
-  font-size: 25px;
-  color: var(--text-color);
-  padding: 0.5vw;
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
 }
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #d02224;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  -webkit-transition: #d02224 0.3s ease-in-out;
+  -moz-transition: #d02224 0.3s ease-in-out;
+  transition: #d02224 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #999;
+}
+::-webkit-input-placeholder {
+  color: #888;
+}
+:-moz-placeholder {
+  color: #888;
+}
+::-moz-placeholder {
+  color: #888;
+}
+:-ms-input-placeholder {
+  color: #888;
+}
+
+.connect-text {
+  padding: 2vw;
+}
+.connect-text h1 {
+  font-family: var(--comforta);
+}
+.connect-text p {
+  margin-top: 1vw;
+  font-family: var(--comforta);
+}
+.error {
+  color: red;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
 button h3 {
   font-family: var(--primary-font);
   font-size: 25px;
@@ -590,6 +659,57 @@ button h3 {
   font-family: var(--primary-font);
   font-size: 25px;
   color: var(--text-color);
+}
+.f-insta {
+  font-family: var(--primary-font);
+  font-size: 30px;
+  color: var(--text-color);
+}
+.acc-insta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.insta-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insta-one .i-image {
+  width: 19vw;
+}
+.insta-two .i-image {
+  width: 19vw;
+}
+.i-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+.i-name {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.i-desc {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e9ecef;
+  padding: 2vw;
+}
+.i-desc .fa-instagram {
+  font-size: 30px;
 }
 /*music*/
 #audio-file {
@@ -780,11 +900,17 @@ button h3 {
   .about-content {
     width: auto;
   }
+  .about-text {
+    padding: 6vw;
+  }
   .about-text h1 {
     font-size: 25px;
   }
   .about-text p {
-    font-size: 16px;
+    font-size: 13px;
+    font-family: var(--comforta);
+    font-weight: 300;
+    margin-top: 2vw;
   }
 
   /*music*/
@@ -820,6 +946,18 @@ button h3 {
 }
 
 @media only screen and (max-width: 480px) {
+  #social_links2 a .fa-facebook,
+  #social_links2 a .fa-instagram,
+  #social_links2 a .fa-youtube,
+  #social_links2 a .fa-spotify {
+    color: var(--text-color);
+    font-size: 32px;
+    margin-top: 3vw;
+    margin-right: 5vw;
+  }
+  .mainMenu li a {
+    font-size: 20px;
+  }
   iframe {
     width: 100%;
   }
@@ -847,7 +985,11 @@ button h3 {
     font-size: 81px;
   }
   .youtube-desc h2 {
-    font-size: 20px;
+    font-size: 13px;
+  }
+  .follow {
+    margin-top: 2vw;
+    margin-bottom: 0vw;
   }
   .resized-logo {
     width: 29%;
@@ -884,31 +1026,23 @@ button h3 {
 
   .connect {
     flex-direction: column;
+    margin-top: 2vw;
   }
 
-  .box1,
-  .box2,
-  .box3 {
-    width: 100%;
-    height: 28vw;
-    opacity: 100%;
+  /* cocntact form*/
+  #grid {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
   }
-
-  form {
-    width: 100%;
+  .connect-text h1 {
+    font-size: 16px;
   }
-  textarea {
-    width: 100%;
+  .connect-text p {
+    font-size: 12px;
   }
-  #contact-form {
-    margin-top: 10vw;
-  }
-  .form-text h1 {
-    font-size: 25px;
-    margin-bottom: 2vw;
-  }
-  label h3 {
-    font-size: 18px;
+  .connect-text {
+    padding: 3vw;
   }
   button h3 {
     font-size: 18px;
@@ -948,9 +1082,12 @@ button h3 {
     height: auto;
   }
   .audio-logo {
-    height: 20vw;
-    width: 20vw;
+    height: 40vw;
+    width: 40vw;
     margin: 2vw 0;
+  }
+  .audio-name {
+    margin: 3vw;
   }
 
   audio {
@@ -959,7 +1096,7 @@ button h3 {
 
   #audio-file .spotify {
     right: 19vw;
-    top: 433vw;
+    top: 62vw;
   }
   .spotify .fa-spotify {
     font-size: 35px;
@@ -967,6 +1104,26 @@ button h3 {
   .music-heading {
     font-size: 20px;
     margin-top: 25vw;
+  }
+  .play-audio button {
+    height: 8vw;
+    width: 17vw;
+    margin: 2vw;
+  }
+  .play-audio a {
+    font-size: 8px;
+    font-weight: bolder;
+  }
+
+  .mp-icon .fa-soundcloud {
+    font-size: 70px;
+  }
+  .mp-icon .fa-itunes {
+    font-size: 70px;
+  }
+
+  .mp-text {
+    font-size: 12px;
   }
 
   /*gallery*/
@@ -979,6 +1136,20 @@ button h3 {
   }
   .c-text {
     font-size: 17px;
+  }
+  /*about*/
+  .f-insta {
+    font-size: 20px;
+    padding: 1vw;
+    margin: 2vw 0;
+  }
+
+  .acc-insta {
+    justify-content: space-evenly;
+  }
+
+  .i-desc {
+    padding: 4vw;
   }
 }
 .active {

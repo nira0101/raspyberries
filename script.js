@@ -3,12 +3,17 @@
 const tabLet = document.querySelector(".navi1");
 const square = document.querySelector(".square");
 const circle = document.querySelector(".circle");
+const img1 = document.querySelector(".asta");
+const img2 = document.querySelector(".ida");
 
 function tabletSize() {
+  console.log(tabletSize)
   if (window.matchMedia("(max-width: 768px)").matches) {
     tabLet.classList.remove("hide");
     square.classList.add("hide");
     circle.classList.add("hide");
+    img1.classList.add("hide");
+    img2.classList.add("hide");
   } else {
     tabLet.classList.add("hide");
    
