@@ -396,7 +396,7 @@ main {
 }
 
 #text h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-family: var(--primary-font);
   color: var(--text-color);
 }
@@ -415,6 +415,7 @@ main {
   width: 10vw;
   position: absolute;
   left: 37vw;
+  bottom: -215px;
 }
 
 /*new-release*/
