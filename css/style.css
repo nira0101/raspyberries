@@ -407,9 +407,9 @@ main {
 }
 
 .greetings {
-  width: 10vw;
+  width: 20vw;
   position: absolute;
-  right: 36vw;
+  right: 26vw;
 }
 .slogan {
   width: 10vw;
